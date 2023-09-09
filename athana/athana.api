@@ -1,0 +1,13 @@
+syntax = "v1"
+
+info(
+	title: "athana"
+	desc: "账号管理系统"
+	author: "panjiangming"
+	email: "panjm2001@126.com"
+	version: "v1"
+)
+
+import (
+	"apis/basic.api"
+)

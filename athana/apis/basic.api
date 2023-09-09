@@ -1,8 +1,8 @@
 syntax = "v1"
 
 info(
-	title: "admin basic"
-	desc: "zeus admin basic apis"
+	title: "athana basic"
+	desc: "athana basic apis"
 	author: "panjiangming"
 	email: "panjm2001@126.com"
 	version: "v1"
@@ -11,8 +11,8 @@ info(
 @server(
 	group: basic
 )
-service admin-api {
+service athana-api {
 	@doc "探活"
 	@handler Ping
-	get /admin/v1/ping
+	get /athana/v1/ping
 }
