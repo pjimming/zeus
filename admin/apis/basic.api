@@ -1,0 +1,18 @@
+syntax = "v1"
+
+info(
+	title: "admin basic"
+	desc: "zeus admin basic apis"
+	author: "panjiangming"
+	email: "type email here"
+	version: "type version here"
+)
+
+@server(
+	group: basic
+)
+service admin-api {
+	@doc "探活"
+	@handler Ping
+	get /admin/v1/ping
+}

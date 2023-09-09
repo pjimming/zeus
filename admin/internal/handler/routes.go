@@ -4,8 +4,8 @@ package handler
 import (
 	"net/http"
 
-	basic "github.com/pjimming/zeus/core/internal/handler/basic"
-	"github.com/pjimming/zeus/core/internal/svc"
+	basic "github.com/pjimming/zeus/admin/internal/handler/basic"
+	"github.com/pjimming/zeus/admin/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )
@@ -15,13 +15,8 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodGet,
-				Path:    "/api/v1/ping",
+				Path:    "/admin/v1/ping",
 				Handler: basic.PingHandler(serverCtx),
-			},
-			{
-				Method:  http.MethodPost,
-				Path:    "/api/v1/login/user",
-				Handler: basic.LoginUserHandler(serverCtx),
 			},
 		},
 	)

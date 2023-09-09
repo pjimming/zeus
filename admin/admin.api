@@ -1,8 +1,8 @@
 syntax = "v1"
 
 info(
-	title: "core"
-	desc: "zeus apis"
+	title: "admin"
+	desc: "zeus admin"
 	author: "panjiangming"
 	email: "panjm2001@126.com"
 	version: "v1"

@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"github.com/pjimming/zeus/core/internal/config"
+	"github.com/pjimming/zeus/admin/internal/config"
 )
 
 type ServiceContext struct {

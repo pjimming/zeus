@@ -4,15 +4,15 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/pjimming/zeus/core/internal/config"
-	"github.com/pjimming/zeus/core/internal/handler"
-	"github.com/pjimming/zeus/core/internal/svc"
+	"github.com/pjimming/zeus/admin/internal/config"
+	"github.com/pjimming/zeus/admin/internal/handler"
+	"github.com/pjimming/zeus/admin/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("c", "etc/core-api.yaml", "the config file")
+var configFile = flag.String("c", "etc/admin-api.yaml", "the config file")
 
 func main() {
 	flag.Parse()

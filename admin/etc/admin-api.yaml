@@ -1,6 +1,7 @@
-Name: core-api
+Name: admin-api
 Host: 0.0.0.0
 Port: 8888
+Timeout: 12000
 
 Log:
   Mode: console

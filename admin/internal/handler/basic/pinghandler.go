@@ -3,7 +3,7 @@ package basic
 import (
 	"net/http"
 
-	"github.com/pjimming/zeus/core/internal/svc"
+	"github.com/pjimming/zeus/admin/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
