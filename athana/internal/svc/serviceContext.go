@@ -42,10 +42,8 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	return &ServiceContext{
 		// config
 		Config: c,
-
 		// database
 		DB: db,
-
 		// middleware
 		RBACAuth: middleware.NewRBACAuthMiddleware().Handle,
 	}
