@@ -8,3 +8,6 @@ Log:
   Encoding: plain
   Level: debug
   Stat: false
+
+MySQL:
+  DSN: "root:123456@tcp(127.0.0.1:3306)/athana?charset=utf8mb4&parseTime=True&loc=Local"

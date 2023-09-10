@@ -61,3 +61,11 @@ func Error400(desc string) CodeError {
 func Error500(desc string) CodeError {
 	return NewCodeError(500, 500, desc)
 }
+
+func ErrorDB(err error) CodeError {
+	return NewCodeError(500, 500, fmt.Sprintf("[DB ERROR]: %v", err))
+}
+
+func ErrorAuth() CodeError {
+	return NewCodeError(401, 401, "认证失败")
+}

@@ -14,5 +14,5 @@ info(
 service admin-api {
 	@doc "探活"
 	@handler Ping
-	get /admin/v1/ping
+	get /ping
 }

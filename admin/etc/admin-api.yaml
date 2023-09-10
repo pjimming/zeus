@@ -8,3 +8,6 @@ Log:
   Encoding: plain
   Level: debug
   Stat: false
+
+MySQL:
+  DSN: ""

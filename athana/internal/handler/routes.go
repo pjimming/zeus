@@ -15,7 +15,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodGet,
-				Path:    "/athana/v1/ping",
+				Path:    "/ping",
 				Handler: basic.PingHandler(serverCtx),
 			},
 		},

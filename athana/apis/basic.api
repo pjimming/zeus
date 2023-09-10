@@ -14,5 +14,5 @@ info(
 service athana-api {
 	@doc "探活"
 	@handler Ping
-	get /athana/v1/ping
+	get /ping
 }
