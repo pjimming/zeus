@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	basic "github.com/pjimming/zeus/athana/internal/handler/basic"
+	user "github.com/pjimming/zeus/athana/internal/handler/user"
 	"github.com/pjimming/zeus/athana/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
@@ -19,5 +20,18 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Handler: basic.PingHandler(serverCtx),
 			},
 		},
+	)
+
+	server.AddRoutes(
+		rest.WithMiddlewares(
+			[]rest.Middleware{serverCtx.RBACAuth},
+			[]rest.Route{
+				{
+					Method:  http.MethodPost,
+					Path:    "/athana/v1/user",
+					Handler: user.CreateUserHandler(serverCtx),
+				},
+			}...,
+		),
 	)
 }

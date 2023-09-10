@@ -1,0 +1,35 @@
+syntax = "v1"
+
+info(
+	title: "athana user"
+	desc: "athana user apis"
+	author: "panjiangming"
+	email: "panjm2001@126.com"
+	version: "v1"
+)
+
+type (
+	CreateUserReq {
+		Username string `json:"username"`
+		Password string `json:"password"`
+		Email    string `json:"email,optional"`
+	}
+
+	UserResp {
+		ID       int64  `json:"id"`
+		Identity string `json:"identity"`
+		Username string `json:"username"`
+		Password string `json:"password"`
+		Email    string `json:"email"`
+	}
+)
+
+@server(
+	middleware: RBACAuth
+	group: user
+)
+service athana-api {
+	@doc "创建用户"
+	@handler CreateUser
+	post /athana/v1/user (CreateUserReq) returns (UserResp)
+}
