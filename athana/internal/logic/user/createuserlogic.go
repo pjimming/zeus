@@ -2,9 +2,10 @@ package user
 
 import (
 	"context"
-
+	"github.com/jinzhu/copier"
 	"github.com/pjimming/zeus/athana/internal/svc"
 	"github.com/pjimming/zeus/athana/internal/types"
+	"github.com/pjimming/zeus/athana/models"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -24,7 +25,8 @@ func NewCreateUserLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Create
 }
 
 func (l *CreateUserLogic) CreateUser(req *types.CreateUserReq) (resp *types.UserResp, err error) {
-	// todo: add your logic here and delete this line
 
+	user := &models.User{}
+	_ = copier.Copy(&user, req)
 	return
 }
